@@ -1,0 +1,28 @@
+<head>
+  <title>TempShare</title>
+</head>
+
+<body>
+  <h1>Welcome to TempShare</h1>
+  <h2>Create a sharing room here</h2>
+    <form class="create-room">
+      <input type="text" name="text" placeholder="type the name of your room"/>
+    </form>
+  <h2>You have {{numberOfRooms}}. Select room for sharing.</h2>
+    <ul>
+      {{#each rooms}}
+        {{> room}}
+      {{/each}}
+    </ul>
+  <h2>Drop your files here</h2>
+
+</body>
+
+<template name="room">
+  <li>
+    <!--<input type="radio" name="roomRadio" value= {{room_name}}>-->
+    <span>{{room_name}}</span>
+    <button class="delete">&times;</button>
+  </li>
+
+</template>

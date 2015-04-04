@@ -14,15 +14,27 @@
         {{> room}}
       {{/each}}
     </ul>
-  <h2>Drop your files here</h2>
-
+  <h2>Upload images</h2>
+    {{> fileUpload}}
+  <h2>List of uploaded images</h2>
+  {{#each images}}
+    {{> image}}
+  {{/each}}
 </body>
 
 <template name="room">
   <li>
-    <!--<input type="radio" name="roomRadio" value= {{room_name}}>-->
     <span>{{room_name}}</span>
-    <button class="delete">&times;</button>
+    <button class="delete">&times; Delete</button>
   </li>
+</template>
 
+<template name="fileUpload">
+  <input type="file" class="myFileInput"/>
+</template>
+
+<template name="image">
+  <span>{{name}}  -  </span>
+  <a href="{{url download=true}}">Download file!</a>
+  <br/>
 </template>

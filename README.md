@@ -1,4 +1,4 @@
 # tempshare-meteor
 Testing Meteor
 
-https://github.com/stedes/tempshare-meteor.git
+https://gist.github.com/dariocravero/3922137

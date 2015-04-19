@@ -1,0 +1,45 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #C8C8C8;
+  background-image: linear-gradient(to bottom, #C8C8C8  , #918e82 100%);
+  background-attachment: fixed;
+
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  padding: 0;
+
+
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 1.5em;
+  margin: 0;
+  margin-bottom: 10px;
+  display: inline-block;
+  margin-right: 1em;
+}
+
+form {
+  margin-top: 10px;
+  margin-bottom: -10px;
+  position: relative;
+}
+
+#login {
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#main {
+
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}

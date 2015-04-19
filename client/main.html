@@ -1,0 +1,57 @@
+<head>
+  <title>TempShare</title>
+</head>
+
+<body>
+
+  <div id="login">
+    {{>loginButtons}}
+  </div>
+
+  <div id="main">
+    <h1>Welcome to TempShare</h1>
+    {{> roomlist}}
+    {{> createRoom}}
+    {{> fileUpload}}
+    {{> imagelist}}
+  </div>
+
+</body>
+
+<template name="roomlist">
+  <h2>You have {{numberOfRooms}}. Select room for sharing.</h2>
+    <ul>
+      {{#each room}}
+        <li>
+          <span>{{roomName}}</span>
+          <button class="delete">&times; Delete</button>
+        </li>
+      {{/each}}
+    </ul>
+</template>
+
+<template name="createRoom">
+{{#if currentUser}}
+  <h2>Create a sharing room here</h2>
+    <form>
+      <input type="text" name="addRoom" placeholder="Type the name of your room"/>
+      <input type="submit" value="Add Room"/>
+    </form>
+{{else}}
+  <h2>Login in to create a sharing room here</h2>
+{{/if}}
+</template>
+
+<template name="fileUpload">
+  <h2>Upload images</h2>
+  <input type="file" class="myFileInput"/>
+</template>
+
+<template name="imagelist">
+  <h2>List of uploaded images</h2>
+  {{#each image}}
+    <span>{{name}}  -  </span>
+    <a href="{{url download=true}}">Download file!</a>
+    <br/>
+  {{/each}}
+</template>

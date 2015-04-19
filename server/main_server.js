@@ -3,9 +3,9 @@ Meteor.publish('theRooms', function(){
   return Rooms.find({createdBy: currentUserId});
 });
 
-console.log(Rooms.find().fetch());
-
-
+Meteor.publish('theImages', function(){
+  return Images.find();
+});
 
 Meteor.methods({
   'addRoom': function(roomNameVar){

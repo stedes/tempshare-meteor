@@ -1,4 +1,5 @@
 Meteor.subscribe('theRooms');
+Meteor.subscribe('theImages');
 
 
 Template.roomlist.helpers({

@@ -22,7 +22,7 @@
   <h2>You have {{numberOfRooms}}. Select room for sharing.</h2>
     <ul>
       {{#each room}}
-        <li>
+        <li class="room {{selectedClass}}">
           <span>{{roomName}}</span>
           <button class="delete">&times; Delete</button>
         </li>
@@ -43,8 +43,12 @@
 </template>
 
 <template name="fileUpload">
-  <h2>Upload images</h2>
+{{#if selectedRoom}}
+  <h2>Upload images to {{selectedRoom.roomName}}</h2>
   <input type="file" class="myFileInput"/>
+{{else}}
+  <h2>Select a room to start uploading</h2>
+{{/if}}
 </template>
 
 <template name="imagelist">

@@ -4,6 +4,8 @@ Meteor.publish('theRooms', function(){
 });
 
 Meteor.publish('theImages', function(){
+  var currentUserId = this.userId;
+  var roomsOfCurrentUser = Rooms.find({createdBy: currentUserId});
   return Images.find();
 });
 
@@ -19,3 +21,6 @@ Meteor.methods({
   }
 
 });
+
+
+//Images.find({metadata:{roomId: "HtJEMaMTzJGWvS697"}}).fetch()
